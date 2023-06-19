@@ -2,3 +2,26 @@
     background: #E8E8E8;
 }
 
+.homedisplay{
+    width:100%;
+    margin-top: 30px;
+}
+
+.rating {
+    color: gold;
+    font-weight: bold;
+  }
+  
+  .stars {
+    display: inline-block;
+  }
+  
+  .checked {
+    color: gold;
+  }
+  
+  .far {
+    color: inherit;
+  }
+  
+  
