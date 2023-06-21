@@ -2,3 +2,23 @@
     background: #E8E8E8;
 }
 
+
+.user-details{
+    align-items: center;
+    justify-self: center;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+#star{
+    width: 24px;
+    height: 24px;
+}
+
+#star-ave{
+    width: 40px;
+    height: 40px;
+}
