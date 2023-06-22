@@ -12,19 +12,26 @@
   <nav class="navbar sticky-top px-5 py-3">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Titikman</a>
-
-          <div class="search-bar w-50 me-5">
-            <form class="d-flex" role="search">
-              <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-danger" type="submit"><img src="assets/search.png" alt=""></button>
-            </form>
-          </div>
-
-      
-          <span class="navbar-text" id="navbarText">
-            <button type="button" class="btn btn-danger me-3">Log In</button>
-            <button type="button" class="btn btn-light">Fredie <img src="assets/user.png" alt=""></button>
-          </span>
+  
+      <div class="search-bar w-50 me-5">
+        <form class="d-flex" role="search">
+          <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-danger" type="submit"><img src="assets/search.png" alt=""></button>
+        </form>
+      </div>
+  
+      <span class="navbar-text" id="navbarText">
+        <button type="button" class="btn btn-danger me-3">Log In</button>
+        <div class="btn-group">
+          <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Fredie <img src="assets/user.png" alt="">
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">See Profile</a></li>
+            <li><a class="dropdown-item" href="#">Log Out</a></li>
+          </ul>
+        </div>
+      </span>
     </div>
   </nav>
 
@@ -150,58 +157,183 @@
                 <h1 class="mb-3">Reviews</h1>
 
 
-                <button type="submit" class="btn btn-danger btn-lg btn-block mb-3" style="width:100%"> Write a Review </button>
+                <button type="submit" class="btn btn-danger btn-lg btn-block mb-3" style="width:100%" data-bs-toggle="modal" data-bs-target="#review"> Write a Review </button>
+                
+                <!--WRITE A REVIEW MODAL-->
+                <div class="modal" id="review">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="review-section">
+                        <div class="container my-5">
+                          <div class="review-section">
+                            <h2>Write a Review</h2>
+                
+                            <form id="review-form">
+                              <div class="mb-3">
+                                <label for="rating" class="form-label">Rating:</label>
+                                <select id="rating" name="rating" required class="form-select">
+                                  <option value="">Select a rating</option>
+                                  <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                                  <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+                                  <option value="3">&#9733;&#9733;&#9733;</option>
+                                  <option value="2">&#9733;&#9733;</option>
+                                  <option value="1">&#9733;</option>
+                                </select>
+                              </div>
+                
+                              <div class="mb-3">
+                                <label for="review" class="form-label">Review:</label>
+                                <textarea id="review" name="review" required class="form-control"></textarea>
+                              </div>
+                
+                              <div class="mb-3">
+                                <label for="media" class="form-label">Upload Media:</label>
+                                <input type="file" id="media" name="media" accept="image/*, video/*" class="form-control">
+                              </div>
+                
+                              <div>
+                                <button type="submit" class="btn btn-danger">Submit</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <!--REVIEW CARD-->
                 <div class="container-fluid review-content p-3 bg-light mb-2">
                     <div class="user-details row">
 
-                        <div class="col-md-6">
-                            <div class="d-flex">
-                                <div class="user-pfp me-2 ">
-                                    <img src="assets/user1.png">
+                      <div class="col-md-12">
+                        <div class="d-flex justify-content-end ">
+                          <button type="button" class="btn btn-outline-secondary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editreview">Edit</button>
+                          <button type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+                        </div>
+                      </div>
+  
+                      <!--EDIT A REVIEW MODAL-->
+                      <div class="modal" id="editreview">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="review-section">
+                              <div class="container my-5">
+                                <div class="review-section">
+                                  <h2>Edit Review</h2>
+                              
+                                  <form id="review-form">
+                                    <div class="mb-3">
+                                      <label for="rating" class="form-label">Rating:</label>
+                                      <select id="rating" name="rating" required class="form-select">
+                                        <option value="">Select a rating</option>
+                                        <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                                        <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+                                        <option value="3">&#9733;&#9733;&#9733;</option>
+                                        <option value="2">&#9733;&#9733;</option>
+                                        <option value="1">&#9733;</option>
+                                      </select>
+                                    </div>
+                              
+                                    <div class="mb-3">
+                                      <label for="review" class="form-label">Review:</label>
+                                      <textarea id="review" name="review" required class="form-control"></textarea>
+                                    </div>
+  
+                                    <div class="mb-3">
+                                      <label for="media" class="form-label">Upload Media:</label>
+                                      <input type="file" id="media" name="media" accept="image/*, video/*" class="form-control">
+                                    </div>
+                              
+                                    <div>
+                                      <button type="submit" class="btn btn-danger">Submit</button>
+                                    </div>
+                                  </form>
                                 </div>
-                                
-                                <div class="user-content flex-column align-content-center mt-1">
-                                    <p>Fredie Argie</p>
-                                    <p>6/19/2023</p>
-                                </div>
+                              </div>
+                              
                             </div>
+                          </div>
                         </div>
-
-                        <div class="col-md-6">
-
-                        <div class="rating d-flex justify-content-md-end align-content-center gap-2 ">
-
-                            <img src="assets/star.png" class="mt-2" id="star" alt="">
-                            <p class="mt-2">4</p>
-
+                      </div>
+                      
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                          <div class="user-pfp me-2">
+                            <img src="assets/user1.png">
+                          </div>
+                      
+                          <div class="user-content flex-column align-content-center mt-1">
+                            <p>Fredie Argie</p>
+                            <p>6/19/2023</p>
+                          </div>
                         </div>
+                    </div>
+                      
+                    <div class="col-md-6">
+                      <div class="rating d-flex justify-content-md-end align-content-center gap-2">
+                        <img src="assets/star.png" class="mt-2" id="star" alt="">
+                          <p class="mt-2">4.5</p>
+                      </div>
+                    </div>
+                      
+                    <div class="col-md-12 my-3" id="text-content">
+                      <p class="text-content mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        <span class="hidden-content hide">Lorem ipsum dolor sit amet consectetur.</span> 
+                      </p>
 
-                        </div>
+                      <a onclick="clik(this.id)" class="expand-link">Read More</a>
 
-                        <div class="col-md-12 my-3" id="text-content">
-                            <p class="text-content mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                              <span class="hidden-content hide">Lorem ipsum dolor sit amet consectetur.</span> 
-                            </p>
+                      <div class="d-flex mt-3">
+                        <img src="assets/happy.png" alt="">
+                        <button onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
+                          0
+                          
+                        </button>
+                        <img src="assets/sad.png" alt="">
+                        <button onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
+                          0
+                          </button>
+                      </div>    
+                  </div>
 
-                            <a onclick="clik(this.id)" class="expand-link">Read More</a>
+  
+              </div>
+          </div>
+  
+  
 
-                            <div class="d-flex mt-3">
-                              <img src="assets/happy.png" alt="">
-                              <button onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
-                                0
-                                
-                              </button>
-                              <img src="assets/sad.png" alt="">
-                              <button onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
-                                0
-                                </button>
-                            </div>    
-                        </div>
+                        
+
+            <!--OWNER RESPONSE CARD-->
+            <div class="d-flex">
+              <div class="container" style="margin-right:10px; background-color: #DC3545; width:5%"></div>
+              <div class="container-fluid review-content p-3 bg-light mb-2">
+                <div class="user-details row">
+                  <div class="col-md-6">
+                    <div class="d-flex">
+                      <div class="user-pfp me-2">
+                        <img src="assets/user1.png">
+                      </div>
+                      <div class="user-content flex-column align-content-center mt-1">
+                        <p>Owner's Response</p>
+                        <p>6/20/2023</p>
+                      </div>
+                    </div>
+                  </div>
+            
+                  <div class="col-md-12 my-3" id="text-content">
+                    <p class="text-content mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptates ipsum voluptatibus, 
+                      <span class="hidden-content hide">molestiae illo cupiditate temporibus rerum. Eius ipsum, soluta quidem sapiente porro sint totam?</span> 
+                      </p>
+                    <a onclick="clik(this.id)" class="expand-link">Read More</a>
+                  </div>
+                </div>
+              </div>
+                
 
                         
                 </div>
-            </div>
 
                        
         </div>
