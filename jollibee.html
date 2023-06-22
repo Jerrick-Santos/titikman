@@ -185,59 +185,30 @@
                             </p>
 
                             <a onclick="clik(this.id)" class="expand-link">Read More</a>
-                            <button  type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1"> <p class="mt-2" id="happy">0</p> <img src="/assets/happy.png" alt=""></button>
+
+                            <div class="d-flex mt-3">
+                              <img src="assets/happy.png" alt="">
+                              <button onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
+                                0
+                                
+                              </button>
+                              <img src="assets/sad.png" alt="">
+                              <button onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
+                                0
+                                </button>
+                            </div>    
                         </div>
 
                         
                 </div>
             </div>
 
-
-            <div class="container-fluid review-content p-3 bg-light mb-2">
-              <div class="user-details row">
-
-                  <div class="col-md-6">
-                      <div class="d-flex">
-                          <div class="user-pfp me-2 ">
-                              <img src="assets/user1.png">
-                          </div>
-                          
-                          <div class="user-content flex-column align-content-center mt-1">
-                              <p>Fredie Argie</p>
-                              <p>6/19/2023</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-md-6">
-
-                  <div class="rating d-flex justify-content-md-end align-content-center gap-2 ">
-
-                      <img src="assets/star.png" class="mt-2" id="star" alt="">
-                      <p class="mt-2">4</p>
-
-                  </div>
-
-                  </div>
-
-                  <div class="col-md-12 my-3" id="text-content">
-                      <p class="text-content mb-1">Lorem ipsum dolor, sit amet
-                        <span class="hidden-content hide"></span> 
-                      </p>
-
-                      <a onclick="clik(this.id)" class="expand-link">Read More</a>
-                      <button  type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1"> <p class="mt-2" id="happy">0</p> <img src="/assets/happy.png" alt=""></button>
-                  </div>
-
-                  
-          </div>
-      </div>
-
                        
         </div>
     </div>
 
     <script src="expand.js"></script>
+    <script src="increment.js"></script>
     <!--Bootstrap JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
