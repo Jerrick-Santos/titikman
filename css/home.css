@@ -1,5 +1,5 @@
 .navbar{
-    background: #D9D9D9;
+    background: #dfd8d8;
 }
 
 .homedisplay{
@@ -43,4 +43,8 @@ p{
 #star-ave{
     width: 40px;
     height: 40px;
+}
+
+.hide{
+    display: none;
 }
