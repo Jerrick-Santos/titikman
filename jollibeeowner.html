@@ -20,7 +20,7 @@
             <span class="navbar-text" id="navbarText">
                <div class="btn-group">
                   <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  Fredie <img src="assets/user.png" alt="">
+                    Owner  <img src="assets/user.png" alt="">
                   </button>
                   <ul class="dropdown-menu">
                      <li><a class="dropdown-item" href="#">See Profile</a></li>
@@ -132,7 +132,7 @@
 
             <div class="row d-flex">
                
-                 <button type="submit" class="btn btn-danger btn-lg btn-block mb-3" style="width:74%" data-bs-toggle="modal" data-bs-target="#review"> Write a Review </button>
+                 <button disabled type="submit" class="btn btn-danger btn-lg btn-block mb-3" style="width:74%" data-bs-toggle="modal" data-bs-target="#review"> Write a Review </button>
                  <!-- WRITE A REVIEW MODAL -->
                  <div class="modal" id="review">
                    <div class="modal-dialog">
@@ -226,50 +226,7 @@
             <!--REVIEW CARD MADE BY USER THEMSELVES-->
             <div class="container-fluid review-content p-3 bg-light mb-2">
                <div class="user-details row">
-                  <div class="col-md-12">
-                     <div class="d-flex justify-content-end ">
-                        <button type="button" class="btn btn-outline-secondary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editreview">Edit</button>
-                        <button type="button" class="btn btn-outline-danger btn-sm">Delete</button>
-                     </div>
-                  </div>
-                  <!--EDIT A REVIEW MODAL-->
-                  <div class="modal" id="editreview">
-                     <div class="modal-dialog">
-                        <div class="modal-content">
-                           <div class="review-section">
-                              <div class="container my-5">
-                                 <div class="review-section">
-                                    <h2>Edit Review</h2>
-                                    <form id="review-form">
-                                       <div class="mb-3">
-                                          <label for="rating" class="form-label">Rating:</label>
-                                          <select id="rating" name="rating" required class="form-select">
-                                             <option value="">Select a rating</option>
-                                             <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
-                                             <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
-                                             <option value="3">&#9733;&#9733;&#9733;</option>
-                                             <option value="2">&#9733;&#9733;</option>
-                                             <option value="1">&#9733;</option>
-                                          </select>
-                                       </div>
-                                       <div class="mb-3">
-                                          <label for="review" class="form-label">Review:</label>
-                                          <textarea id="review" name="review" required class="form-control"></textarea>
-                                       </div>
-                                       <div class="mb-3">
-                                          <label for="media" class="form-label">Upload Media:</label>
-                                          <input type="file" id="media" name="media" accept="image/*, video/*" class="form-control">
-                                       </div>
-                                       <div>
-                                          <button type="submit" class="btn btn-danger">Submit</button>
-                                       </div>
-                                    </form>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+
                   <div class="col-md-6">
                      <div class="d-flex">
                         <div class="user-pfp me-2">
@@ -295,12 +252,16 @@
                      <a onclick="clik(this.id)" class="expand-link">Read More</a>
                      <div class="d-flex mt-3">
                         <img src="assets/happy.png" alt="">
-                        <button onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
+                        <button disabled onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
                         20
                         </button>
                         <img src="assets/sad.png" alt="">
-                        <button onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
+                        <button disabled onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
                         3
+                        </button>
+
+                        <button type="button" class="btn btn-danger btn-sm d-flex gap-2 mt-1 sad unliked" style="margin-left:400px;" data-bs-toggle="modal" data-bs-target="#respond">
+                            Respond
                         </button>
                      </div>
                   </div>
@@ -312,6 +273,35 @@
             <div class="d-flex">
                <div class="container" style="margin-right:10px; background-color: #DC3545; width:5%"></div>
                <div class="container-fluid review-content p-3 bg-light mb-2">
+                <div class="col-md-12">
+                    <div class="d-flex justify-content-end ">
+                       <button type="button" class="btn btn-outline-secondary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editresponse">Edit</button>
+                       <button type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+                    </div>
+                 </div>
+                 <!--EDIT A RESPONSE MODAL-->
+                 <div class="modal" id="editresponse">
+                    <div class="modal-dialog">
+                       <div class="modal-content">
+                          <div class="review-section">
+                             <div class="container my-5">
+                                <div class="review-section">
+                                   <h2>Edit Response</h2>
+                                   <form id="review-form">
+                                         <label for="review" class="form-label">Response:</label>
+                                         <textarea id="review" name="review" required class="form-control"></textarea>
+                                      
+                                      <div>
+                                         <button type="submit" class="btn btn-danger">Submit</button>
+                                      </div>
+                                   </form>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+
                   <div class="user-details row">
                      <div class="col-md-6">
                         <div class="d-flex">
@@ -362,13 +352,17 @@
                     <a onclick="clik(this.id)" class="expand-link">Read More</a>
                     <div class="d-flex mt-3">
                        <img src="assets/happy.png" alt="">
-                       <button onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
+                       <button disabled onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
                        10
                        </button>
                        <img src="assets/sad.png" alt="">
-                       <button onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
+                       <button disabled onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
                        2
                        </button>
+
+                       <button type="button" class="btn btn-danger btn-sm d-flex gap-2 mt-1 sad unliked" style="margin-left:400px;" data-bs-toggle="modal" data-bs-target="#respond">
+                        Respond
+                    </button>
                     </div>
                  </div>
               </div>
@@ -402,13 +396,17 @@
                     <a onclick="clik(this.id)" class="expand-link">Read More</a>
                     <div class="d-flex mt-3">
                        <img src="assets/happy.png" alt="">
-                       <button onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
+                       <button disabled onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
                        18
                        </button>
                        <img src="assets/sad.png" alt="">
-                       <button onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
+                       <button disabled onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
                        2
                        </button>
+
+                       <button type="button" class="btn btn-danger btn-sm d-flex gap-2 mt-1 sad unliked" style="margin-left:400px;" data-bs-toggle="modal" data-bs-target="#respond">
+                        Respond
+                    </button>
                     </div>
                  </div>
               </div>
@@ -441,13 +439,17 @@
                     <a onclick="clik(this.id)" class="expand-link">Read More</a>
                     <div class="d-flex mt-3">
                        <img src="assets/happy.png" alt="">
-                       <button onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
+                       <button disabled onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
                        13
                        </button>
                        <img src="assets/sad.png" alt="">
-                       <button onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
+                       <button disabled onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
                        2
                        </button>
+
+                       <button type="button" class="btn btn-danger btn-sm d-flex gap-2 mt-1 sad unliked" style="margin-left:400px;" data-bs-toggle="modal" data-bs-target="#respond">
+                        Respond
+                    </button>
                     </div>
                  </div>
               </div>
@@ -480,13 +482,17 @@
                   <a onclick="clik(this.id)" class="expand-link">Read More</a>
                   <div class="d-flex mt-3">
                      <img src="assets/happy.png" alt="">
-                     <button onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
+                     <button disabled onclick="incDecHappy(this.id)" type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1 happy unliked" style="margin-right: 15px;">
                      6
                      </button>
                      <img src="assets/sad.png" alt="">
-                     <button onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
+                     <button disabled onclick="incDecSad(this.id)" type="button" class="btn btn-outline-danger btn-sm d-flex gap-2 mt-1 sad unliked">
                      12
                      </button>
+
+                     <button type="button" class="btn btn-danger btn-sm d-flex gap-2 mt-1 sad unliked" style="margin-left:400px;" data-bs-toggle="modal" data-bs-target="#respond">
+                        Respond
+                    </button>
                   </div>
                </div>
             </div>
@@ -497,7 +503,35 @@
          <div class="d-flex">
             <div class="container" style="margin-right:10px; background-color: #DC3545; width:5%"></div>
             <div class="container-fluid review-content p-3 bg-light mb-2">
+                
                <div class="user-details row">
+                <div class="d-flex justify-content-end ">
+                    <button type="button" class="btn btn-outline-secondary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#editresponse">Edit</button>
+                    <button type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+                 </div>
+              </div>
+              <!--EDIT A RESPONSE MODAL-->
+              <div class="modal" id="editresponse">
+                 <div class="modal-dialog">
+                    <div class="modal-content">
+                       <div class="review-section">
+                          <div class="container my-5">
+                             <div class="review-section">
+                                <h2>Edit Response</h2>
+                                <form id="review-form">
+                                      <label for="review" class="form-label">Response:</label>
+                                      <textarea id="review" name="review" required class="form-control"></textarea>
+                                   
+                                   <div>
+                                      <button type="submit" class="btn btn-danger">Submit</button>
+                                   </div>
+                                </form>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
                   <div class="col-md-6">
                      <div class="d-flex">
                         <div class="user-pfp me-2">
@@ -514,6 +548,30 @@
                         <span class="hidden-content hide"></span> 
                      </p>
                      <a onclick="clik(this.id)" class="expand-link">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+         <!--WRITE A RESPONSE MODAL-->
+         <div class="modal" id="respond">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="review-section">
+                     <div class="container my-5">
+                        <div class="review-section">
+                           <h2>Write a Response</h2>
+                           <form id="review-form">
+                                 <label for="review" class="form-label">Response:</label>
+                                 <textarea id="review" name="review" required class="form-control"></textarea>
+                              
+                              <div>
+                                 <button type="submit" class="btn btn-danger">Submit</button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
