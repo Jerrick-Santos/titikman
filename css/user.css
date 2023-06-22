@@ -1,0 +1,40 @@
+*, html {
+    margin-left: 0px;
+}
+.profile-container {
+  display: flex;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-right: 50px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E8E8E8;
+  padding: 20px;
+  height: 1100px;
+  width: 500px;
+}
+
+.profile-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ccc;
+  margin-bottom: 10px;
+}
+
+.profile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-weight: bold;
+}
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
