@@ -1,10 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <nav class="navbar sticky-top px-5 py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Titikman</a>
+
+            <div class="search-bar w-50 me-5">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-danger" type="submit"><img src="assets/search.png" alt=""></button>
+                </form>
+            </div>
+
+
+            <span class="navbar-text" id="navbarText">
+            <button type="button" class="btn btn-danger me-3">Write a Review</button>
+            <button type="button" class="btn btn-danger me-3">Log In</button>
+            <button type="button" class="btn btn-light"><img src="assets/user.png" alt=""></button>
+          </span>
+        </div>
+    </nav>
+    <style>
+    *, html {
+        margin-left: 0px;
+    }
+    .profile-container {
+      display: flex;
+      margin-top: 30px;
+      margin-left: 0px;
+      flex-direction: column;
+      align-items: center;
+      background-color: #E8E8E8;
+      padding: 20px;
+      height: 1100px;
+      width: 500px;
+    }
+
+    .profile-icon {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .profile-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-name {
+      font-weight: bold;
+    }
+
+    .cards-container {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
 
+<div class="row">
+    <div class="col-lg-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="profile-container">
+                        <div class="profile-icon">
+                            <img src="assets/initialpic.jpg" alt="Profile Picture">
+                        </div>
+                        <h3 class="profile-name">Fredie Argie &nbsp <img src="assets/edit.png"></h3>
+                        </br>
+                        <h4>An avid food enthusiast who did nothing but critic food places and compare everything to his favorite food places!</h4>
+                    </div>
+                </div>
+            </div>
+        </div>    </div>
+
+    <div class="col-lg-8">
+        <div class="cards-container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/jollibee.jpg" class="card-img-top" alt="Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Jollibee</h5>
+                            <p class="card-text">As a self-proclaimed burger connoisseur, I can confidently say that Jollibee's burgers
+                                are a cut above the rest. The Yumburger, with its soft bun hugging a thick and juicy patty,
+                                topped with fresh lettuce, cheese, and a tangy signature sauce, creates an explosion of flavors in every bite.
+                                It's a harmonious symphony of taste that satisfies my burger cravings like no other.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/manginasal.jpg" class="card-img-top" alt="Image 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Mang Inasal</h5>
+                            <p class="card-text">I tried Mang Inasal during my visit to the Philippines,
+                                and it exceeded my expectations. The chicken was perfectly grilled with a smoky flavor,
+                                and the accompanying soy sauce and calamansi provided a tangy kick.
+                                The restaurant had a vibrant and lively atmosphere, and the prices were very reasonable.
+                                I highly recommend trying their chicken inasal!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-6">
+                    <div class="card">
+                        <img src="assets/24chicken.jpg" class="card-img-top" alt="Image 3">
+                        <div class="card-body">
+                            <h5 class="card-title">24 Chicken</h5>
+                            <p class="card-text">Korean style chicken 🍗 Always have long queues during lunch time since it is
+                                located near dlsu and csb. Also, people who work nearby would go and visit too. Place is too
+                                small for big groups and they do claygo policy here. 😍😇❤️</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/starbucks.jpg" class="card-img-top" alt="Image 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Starbucks</h5>
+                            <p class="card-text">As a tea enthusiast, I appreciate that Starbucks offers a good selection of teas
+                                alongside their coffee options. Their matcha lattes are my go-to choice, and they're always made with
+                                precision and care. The staff is knowledgeable and friendly, and they are happy to accommodate customizations.
+                                It's a great place to relax with a cup of tea and enjoy some quiet time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/subway.jpg" class="card-img-top" alt="Image 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Subway</h5>
+                            <p class="card-text">Subway offers great value for the price. The footlong subs are generous and can
+                                easily be split into two meals. The 'Sub of the Day' promotion is fantastic for getting a delicious
+                                sandwich at a discounted price. The quality is consistent across different locations, and the service
+                                is usually quick. It's my go-to place for a filling and affordable meal.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    </div>
+
+</div>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
