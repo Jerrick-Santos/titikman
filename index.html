@@ -25,12 +25,21 @@
                         <div class="card-body">
                             <h1 class="text-center mt-3 text-danger">Login</h1>
                             <form action="">
+                                <div class="mb-1">
+                                    <label class="form-label">Select User Type:</label>
+                                </div>
+                                <select class="form-select mb-3"
+                                        aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        <option value="1">User</option>
+                                        <option value="2">Owner</option>
+                                </select>
                                 <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Username"/>
                                 <input type="text" name="" id="" class="form-control my-4 py-2" placeholder="Password"/>
-                                <div class="text-center mt-3">
+                                <div class="text-center mt-3 mb-2">
                                     <button class="btn btn-danger">Login</button>
-                                    <a href="#" class="nav-link my-3">New to Titikman? Sign up</a>
                                 </div>
+                                <small class="d-flex justify-content-center">New to Titikman? <a href="#">Sign up</a></small>
                             </form>
                         </div>
                     </div>
