@@ -173,21 +173,65 @@
                         <div class="rating d-flex justify-content-md-end align-content-center gap-2 ">
 
                             <img src="assets/star.png" class="mt-2" id="star" alt="">
-                            <p class="mt-2">4.5</p>
+                            <p class="mt-2">4</p>
 
                         </div>
 
                         </div>
 
                         <div class="col-md-12 my-3" id="text-content">
-                            <p class="text-content mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptates ipsum voluptatibus, molestiae illo cupiditate temporibus rerum. Eius ipsum, soluta quidem sapiente porro sint totam?</p>
-                            <a href="" id="expand-0">Read More</a>
-                            <button type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1"> <p class="mt-2" id="happy">0</p> <img src="/assets/happy.png" alt=""></button>
+                            <p class="text-content mb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                              <span class="hidden-content hide">Lorem ipsum dolor sit amet consectetur.</span> 
+                            </p>
+
+                            <a onclick="clik(this.id)" class="expand-link">Read More</a>
+                            <button  type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1"> <p class="mt-2" id="happy">0</p> <img src="/assets/happy.png" alt=""></button>
                         </div>
 
                         
                 </div>
             </div>
+
+
+            <div class="container-fluid review-content p-3 bg-light mb-2">
+              <div class="user-details row">
+
+                  <div class="col-md-6">
+                      <div class="d-flex">
+                          <div class="user-pfp me-2 ">
+                              <img src="assets/user1.png">
+                          </div>
+                          
+                          <div class="user-content flex-column align-content-center mt-1">
+                              <p>Fredie Argie</p>
+                              <p>6/19/2023</p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-md-6">
+
+                  <div class="rating d-flex justify-content-md-end align-content-center gap-2 ">
+
+                      <img src="assets/star.png" class="mt-2" id="star" alt="">
+                      <p class="mt-2">4</p>
+
+                  </div>
+
+                  </div>
+
+                  <div class="col-md-12 my-3" id="text-content">
+                      <p class="text-content mb-1">Lorem ipsum dolor, sit amet
+                        <span class="hidden-content hide"></span> 
+                      </p>
+
+                      <a onclick="clik(this.id)" class="expand-link">Read More</a>
+                      <button  type="button" class="btn btn-outline-success btn-sm d-flex gap-2 mt-1"> <p class="mt-2" id="happy">0</p> <img src="/assets/happy.png" alt=""></button>
+                  </div>
+
+                  
+          </div>
+      </div>
 
                        
         </div>
